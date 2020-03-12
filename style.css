@@ -297,8 +297,8 @@ aside ul li a:before {
         grid-template-columns: 1fr 1fr;
   }
   #content .membersection .member .memberimg {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 }
 /*# sourceMappingURL=style.css.map */
