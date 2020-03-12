@@ -1,0 +1,244 @@
+$maincol: #008AB7;
+
+$themcol1: #588B8B;
+$themcol2: #FFFFFF;
+$themcol3: #FFD5C2;
+$themcol4: #F28F3B;
+$themcol5: #C8553D;
+
+//* https://coolors.co/ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Bellota Text', cursive;
+    // background: #D0F3FF;
+    background: white;
+    color:black;
+
+}
+.navbar{
+    background:#F28F3B;
+
+    margin-left:220px;
+    transition: 0.2s linear;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    ul{
+        margin: 0 1.2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        height:55px;
+        .navheader{
+            line-height: 1;
+            font-size:2em;
+            order: 2;
+            color: white;
+        }
+        .navbutton{
+            button{
+            border:0;
+            display: inline-block;
+            color:white;
+            font-size: 1.2em;
+            background: transparent;
+            order:1;
+            }
+        }
+    }
+}
+aside{
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color:#C8553D;
+    width:220px;
+    padding-top:55px;
+    transition: 0.2s linear;
+    ul{
+        list-style: none;
+        width:100%;
+        li{
+            display: block;
+            padding:8px;
+            font-size:1.2em;
+            transition: 0.2s;
+            // border:1px solid red;
+            background: linear-gradient(to right, #FFD5C2 50%, transparent 50%);
+            background-size: 200% 100%;
+            background-position:right top;
+            &:hover{
+                // background: #008AB7;
+                background-position:left bottom;
+                // color:white;
+                a{
+                    color:black;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            a:before{
+                content: '\f105';
+                font-family: FontAwesome;
+                margin-right:8px;
+            }
+        }
+    }
+    
+}
+#content{
+    margin-left:220px;
+    transition: 0.2s linear;
+    .mainimg{
+        width:300px;
+        margin-top:32px;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        transition: 0.2s;
+        &:hover{
+            box-shadow: 0 0 20px rgba(0,0,0,0.2), 0 0 10px rgba(0,0,0,0.15);
+        }
+    }
+    .mainheading{
+        font-size:64px;
+        text-align: center;
+        margin:32px 0;
+        font-family: 'Patua One', cursive;
+    }
+    .maintext{
+        padding: 0 32px;
+        max-width: 840px;
+        margin: auto;
+        text-align: justify;
+    }
+
+    .subheading{
+        display: grid;
+        margin-top:48px;
+        font-size: 2em;
+        place-items: center;
+        height:200px;
+        color: $themcol2;
+        background-color:$themcol4;
+    }
+
+    .membersection{
+        margin: 32px auto;
+        // padding: 32px;
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-gap:16px;
+        max-width:990px;
+        .member{
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            padding:16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: auto;
+            border-radius: 8px;
+            transition: 0.2s;
+            &:hover{
+                box-shadow: 0 0 10px rgba(0,0,0,0.25);
+            }
+            .memberimg{
+                width:200px;
+                height:200px;
+                border-radius: 50%;
+            }
+            .membername{
+                font-size:24px;
+                text-decoration: none;
+                color:black;
+                display: flex;
+                justify-content: center;
+                &:hover{
+                    text-decoration: underline;
+                }
+                .crown{
+                    width:30px;
+                    margin-left:8px;
+                    height: auto;
+                }
+            }
+            .memberdesignation{
+                font-size: 16px;
+                color:rgba(0,0,0,0.8);
+            }
+            .crown{
+                position: relative;
+                top:0;
+                right:0;
+                width:40px;
+
+            }
+        }
+        .rank1{
+            border:5px solid $themcol5;
+        }
+        .rank2{
+            border: 5px solid $themcol4;
+        }
+        .rank3{
+            border: 5px solid $themcol3;
+        }
+    }
+    .footer{
+        margin-top: 32px;
+        padding: 16px;
+        font-size: 24px;
+        text-align: center;
+        background: $themcol1;
+        color: white;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width:1188px) {
+    #content{
+        .membersection{
+            margin: 24px 24px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media only screen and (max-width:700px) {
+    body{
+        // background:red;
+    }
+    .navbar{
+        margin-left:0;
+        ul{
+            .navheader{
+                order:1;
+            }
+            .navbutton{
+                order:2;
+            }
+        }
+    }
+    aside{
+        left:-250px;
+    }
+    #content{
+        margin-left: 0;
+        .mainheading{
+            font-size:40px;
+            text-align: center;
+            margin:16px 0;
+        }
+        .membersection{
+            margin: 16px 16px;
+            grid-template-columns:1fr;
+        }
+    }
+}
