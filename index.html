@@ -35,12 +35,15 @@
         <center><img src="./internet.svg" class="mainimg" /></center>
         <h1 class="mainheading" data-text="All India Mistri Union">All India Mistri Union</h1>
         <p class="maintext">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa autem impedit, tenetur error in tempora
-            placeat corrupti reiciendis vel nisi, vitae corporis distinctio maxime iusto quibusdam iste sunt minus
-            nulla!
-            Atque, corporis nostrum iste officiis nobis nemo eveniet iure impedit fugit ratione consectetur adipisci
-            facilis, perferendis, sunt veniam? Officiis labore molestiae praesentium est sunt quas. Praesentium
-            consectetur mollitia aperiam necessitatibus!
+            A group of independent coders. Our core team includes UI/UX Designer, Coder, Hacker/Tester.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At, vero. Sit fuga vero id. Neque quia dolor odit
+            iure, voluptatum repudiandae expedita suscipit, repellendus libero maiores, minus ipsa harum esse.
+            Minima, veritatis. Cumque quia ex animi eaque tempora ipsam, iste minus blanditiis magni quam, sed totam
+            nostrum similique possimus dolore quos aliquid praesentium rerum expedita quas. Delectus necessitatibus
+            rerum minima!
+            Quis, animi reiciendis officiis voluptate deserunt repellat hic nihil natus iure fugiat dolorem adipisci
+            neque obcaecati aperiam consequatur asperiores dicta porro illo nemo. Nobis voluptatem beatae, voluptas
+            error repellendus blanditiis.
         </p>
         <p class="subheading">Members</p>
         <div id="leader" class="membersection">
@@ -155,17 +158,27 @@
         const navbar = document.querySelector('.navbar');
         const main = document.querySelector('#content');
         document.querySelector('#sidenavbtn').addEventListener("click", () => {
-            if (sidebar.style.left == "0" || sidebar.style.left == "0px") {
+            if (sidebar.style.left == "0" || sidebar.style.left == "0px" || sidebar.style.left == "") {
                 sidebar.style.left = "-220px";
                 navbar.style.marginLeft = "0px";
                 main.style.marginLeft = "0px";
+                document.body.style.overflowY = "scroll";
             } else {
                 sidebar.style.left = "0px";
-                navbar.style.marginLeft = "220px";
-                main.style.marginLeft = "220px";
+                if (document.documentElement.clientWidth <= 480) {
+                    navbar.style.marginLeft = "0px";
+                    main.style.marginLeft = "0px";
+                    if (document.documentElement.clientWidth <= 480 && sidebar.style.left == "0px") {
+                        document.body.style.overflow = "hidden";
+                    }
+                } else {
+                    navbar.style.marginLeft = "220px";
+                    main.style.marginLeft = "220px";
+                }
             }
         });
-
+    </script>
+    <script>
         const txt = baffle(".mainheading").set({
             characters: '!@#$%^&*<>?;[]()',
             speed: 40

@@ -18,11 +18,11 @@ body{
     // background: #D0F3FF;
     background: white;
     color:black;
-
 }
 .navbar{
     background:#F28F3B;
-
+    position:sticky;
+    top:0;
     margin-left:220px;
     transition: 0.2s linear;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -167,6 +167,7 @@ aside{
                     width:30px;
                     margin-left:8px;
                     height: auto;
+                    z-index: -1;
                 }
             }
             .memberdesignation{
@@ -213,7 +214,7 @@ aside{
 
 @media only screen and (max-width:700px) {
     body{
-        // background:red;
+        
     }
     .navbar{
         margin-left:0;

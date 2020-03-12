@@ -13,6 +13,9 @@ body {
 
 .navbar {
   background: #F28F3B;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   margin-left: 220px;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -213,6 +216,7 @@ aside ul li a:before {
   width: 30px;
   margin-left: 8px;
   height: auto;
+  z-index: -1;
 }
 
 #content .membersection .member .memberdesignation {
