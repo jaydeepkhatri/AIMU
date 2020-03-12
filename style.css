@@ -9,6 +9,7 @@ body {
   font-family: 'Bellota Text', cursive;
   background: white;
   color: black;
+  scroll-behavior: smooth;
 }
 
 .navbar {
