@@ -161,6 +161,8 @@ aside{
                 color:black;
                 display: flex;
                 justify-content: center;
+                align-items: center;
+                text-align: center;
                 &:hover{
                     text-decoration: underline;
                 }
@@ -237,7 +239,13 @@ aside{
         }
         .membersection{
             margin: 16px 16px;
-            grid-template-columns:1fr;
+            grid-template-columns:1fr 1fr;
+            .member{
+                .memberimg{
+                    width:80px;
+                    height: 80px;
+                }
+            }
         }
     }
 }

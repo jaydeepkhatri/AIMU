@@ -207,6 +207,10 @@ aside ul li a:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 #content .membersection .member .membername:hover {
@@ -289,8 +293,12 @@ aside ul li a:before {
   }
   #content .membersection {
     margin: 16px 16px;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  #content .membersection .member .memberimg {
+    width: 80px;
+    height: 80px;
   }
 }
 /*# sourceMappingURL=style.css.map */
