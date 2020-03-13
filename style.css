@@ -140,9 +140,36 @@ aside ul li a:before {
 
 #content .maintext {
   padding: 0 32px;
-  max-width: 840px;
+  max-width: 990px;
   margin: auto;
   text-align: justify;
+}
+
+#content .groupinfo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 16px;
+  margin: auto;
+  padding: 32px;
+  max-width: 990px;
+}
+
+#content .groupinfo .info {
+  display: inline-block;
+  padding: 16px 20px;
+  background: #588B8B;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#content .groupinfo .info .bigf {
+  font-size: 36px;
+}
+
+#content .groupinfo .info .fa {
+  margin-right: 4px;
 }
 
 #content .subheading {
@@ -184,7 +211,7 @@ aside ul li a:before {
       -ms-flex-direction: column;
           flex-direction: column;
   height: auto;
-  border-radius: 8px;
+  border-radius: 4px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -293,6 +320,13 @@ aside ul li a:before {
     font-size: 40px;
     text-align: center;
     margin: 16px 0;
+  }
+  #content .maintext {
+    padding: 0 16px;
+  }
+  #content .groupinfo {
+    grid-column-gap: 8px;
+    padding: 16px;
   }
   #content .membersection {
     margin: 16px 16px;
