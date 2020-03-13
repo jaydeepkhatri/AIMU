@@ -13,12 +13,13 @@ $themcol5: #C8553D;
     padding:0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Bellota Text', cursive;
-    // background: #D0F3FF;
     background: white;
     color:black;
-    scroll-behavior: smooth;
 }
 .navbar{
     background:#F28F3B;
